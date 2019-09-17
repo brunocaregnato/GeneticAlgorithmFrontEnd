@@ -1,0 +1,68 @@
+<form class="w3-container">
+  <div style="text-align:center">
+    <h1> {{ title }} </h1>
+  </div>
+  <div>
+    <p>Tamanho da População: </p>
+    <input name="populationSize" class="w3-input" type="number" [(ngModel)]="parameters.populationSize">
+  </div>
+  <div>
+    <p>Taxa de Crossover: </p>
+    <div class="slidecontainer">
+      <input name="crossoverRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.crossoverRate"> {{parameters.crossoverRate}}%
+    <p>Taxa de Mutação: </p>
+      <input name="mutationRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.mutationRate"> {{parameters.mutationRate}}%
+    </div>
+  </div>
+  <div class="container">
+    <input class="checkmark" type="checkbox" name="useElitism" [(ngModel)]="parameters.useElitism"> Elitismo
+  </div>
+  <div>
+    <p>Quantidade máxima de gerações: </p>
+    <input name="maxGenerations" class="w3-input" type="number" [(ngModel)]="parameters.maxGenerations">
+  </div>
+  <div class="grid-container">
+    <div>
+        <p>Recompensa movimentar pro norte: </p>
+        <input name="moveNorthReward" class="w3-input" type="number" [(ngModel)]="parameters.moveNorthReward">
+    </div>
+    <div>
+        <p>Recompensa movimentar pro sul: </p>
+        <input name="moveSouthReward" class="w3-input" type="number" [(ngModel)]="parameters.moveSouthReward">
+    </div>
+    <div>
+        <p>Recompensa movimentar pro oeste: </p>
+        <input name="moveWestReward" class="w3-input" type="number" [(ngModel)]="parameters.moveWestReward">
+    </div>
+    <div>
+        <p>Recompensa movimentar pro leste: </p>
+        <input name="moveEastReward" class="w3-input" type="number" [(ngModel)]="parameters.moveEastReward">
+    </div>
+    <div>
+        <p>Recompensa por completar o labirinto: </p>
+        <input name="completedLabirynthReward" class="w3-input" type="number" [(ngModel)]="parameters.completedLabirynthReward">
+    </div>
+    <div>
+        <p>Penalidade por atravessar a parede: </p>
+        <input name="crossedWallPenalty" class="w3-input" type="number" [(ngModel)]="parameters.crossedWallPenalty">
+    </div>
+    <div>
+        <p>Penalidade por refazer o mesmo movimento: </p>
+        <input name="undoMovementPenalty" class="w3-input" type="number" [(ngModel)]="parameters.undoMovementPenalty">
+    </div>
+    <div>
+        <p>Penalidade por sair dos limites do labirinto: </p>
+        <input name="outOfBoundsPenalty" class="w3-input" type="number" [(ngModel)]="parameters.outOfBoundsPenalty">
+    </div>
+  </div>
+
+  <br>
+  <div>
+    <button class="w3-btn" type="button" (click)="sendInformations()">GERAR</button>
+  </div>
+
+  <br>
+  <app-labyrinth #labyrinth></app-labyrinth>
+
+</form>
+<router-outlet></router-outlet>
