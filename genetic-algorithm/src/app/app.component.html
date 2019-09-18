@@ -1,25 +1,27 @@
-<form class="w3-container">
+<form>
+<div class="form-group">
   <div style="text-align:center">
     <h1> {{ title }} </h1>
   </div>
-  <div>
-    <p>Tamanho da População: </p>
-    <input name="populationSize" class="w3-input" type="number" [(ngModel)]="parameters.populationSize">
-  </div>
-  <div>
-    <p>Taxa de Crossover: </p>
-    <div class="slidecontainer">
-      <input name="crossoverRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.crossoverRate"> {{parameters.crossoverRate}}%
-    <p>Taxa de Mutação: </p>
-      <input name="mutationRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.mutationRate"> {{parameters.mutationRate}}%
+  <div class="inputs">
+    <div>
+      <p>Tamanho da População: </p>
+      <input name="populationSize" class="w3-input" type="number" [(ngModel)]="parameters.populationSize">
     </div>
-  </div>
-  <div class="container">
-    <input class="checkmark" type="checkbox" name="useElitism" [(ngModel)]="parameters.useElitism"> Elitismo
-  </div>
-  <div>
-    <p>Quantidade máxima de gerações: </p>
-    <input name="maxGenerations" class="w3-input" type="number" [(ngModel)]="parameters.maxGenerations">
+      <p>Taxa de Crossover: </p>
+      <div class="slidecontainer">
+        <input name="crossoverRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.crossoverRate"> {{parameters.crossoverRate}}%
+      <p>Taxa de Mutação: </p>
+        <input name="mutationRate" min="0" max="100" value="50" class="slider" type="range" [(ngModel)]="parameters.mutationRate"> {{parameters.mutationRate}}%
+      </div>
+      <br>
+    <div>
+      <input class="checkmark" type="checkbox" name="useElitism" [(ngModel)]="parameters.useElitism"> Elitismo
+    </div>
+    <div>
+      <p>Quantidade máxima de gerações: </p>
+      <input name="maxGenerations" class="w3-input" type="number" [(ngModel)]="parameters.maxGenerations">
+    </div>
   </div>
   <div class="grid-container">
     <div>
@@ -57,12 +59,15 @@
   </div>
 
   <br>
-  <div>
-    <button class="w3-btn" type="button" (click)="sendInformations()">GERAR</button>
+  <div style="text-align:center">
+    <button class="btn btn-sucess" type="button" (click)="sendInformations()">GERAR</button>
   </div>
 
   <br>
-  <app-labyrinth #labyrinth></app-labyrinth>
+  <div style="text-align:center">
+    <app-labyrinth #labyrinth></app-labyrinth>
+  </div>
 
+</div>
 </form>
 <router-outlet></router-outlet>

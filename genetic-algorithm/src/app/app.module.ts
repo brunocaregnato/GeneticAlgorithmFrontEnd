@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { LabyrinthComponent } from './components/labyrinth/labyrinth.component';
 import { SessionService } from './services/sessions.service';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { SessionService } from './services/sessions.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule ,
+    NgxSpinnerModule
   ],
   providers: [SessionService],
   bootstrap: [AppComponent]

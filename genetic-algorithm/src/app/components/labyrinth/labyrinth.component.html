@@ -1,2 +1,14 @@
-<canvas id="canvas" width="400px" height="400px">
-</canvas>
+<ngx-spinner></ngx-spinner>
+<canvas id="canvas"> </canvas>
+<br>
+<br>
+<br>
+<div *ngIf="bestPathFitness != undefined">
+<form>
+    <div class="form-group">
+        <p>Gerações Executadas: {{generationsExecuted}} </p> 
+        <p>Aptidão: {{bestPathFitness}} </p>
+        <p>Atingiu o número máximo de gerações? {{reachedMaxGenerations}}</p>
+    </div>
+</form>
+</div>

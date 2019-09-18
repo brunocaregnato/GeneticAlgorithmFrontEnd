@@ -28,17 +28,17 @@ export class Parameter {
 
     constructor(){
         this.populationSize = 5000;
-        this.mutationRate = 50;
-        this.crossoverRate = 50;
+        this.mutationRate = 30;
+        this.crossoverRate = 80;
         this.useElitism = true;
         this.maxGenerations = 30;
-        this.moveNorthReward = 150;
-        this.moveSouthReward = 150;
-        this.moveEastReward = 150;
-        this.moveWestReward = 150;
-        this.completedLabirynthReward = 300;
-        this.crossedWallPenalty = 150;
-        this.undoMovementPenalty = 150;
-        this.outOfBoundsPenalty = 500;
+        this.moveNorthReward = 300;
+        this.moveSouthReward = 200;
+        this.moveEastReward = 200;
+        this.moveWestReward = 300;
+        this.completedLabirynthReward = 700;
+        this.crossedWallPenalty = 500;
+        this.undoMovementPenalty = 300;
+        this.outOfBoundsPenalty = 1000;
     }
 }

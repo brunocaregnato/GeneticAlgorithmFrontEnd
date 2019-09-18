@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
   public sendInformations(){
     this._sessionService.postSession(this.parameters)
     .subscribe(returnValue => {
-      this.labyrinth.drawLabyrinth(this.parameters, returnValue.id);   
+      this.labyrinth.draw(this.parameters, returnValue.id);   
     });
   }
 }
