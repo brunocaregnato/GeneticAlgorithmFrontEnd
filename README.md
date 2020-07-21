@@ -5,7 +5,6 @@ Trabalho realizado para disciplina de Inteligência Artificial II pela Universid
 - Instalar o node.js
 - No mesmo diretório da pasta src, rodar o comando ```npm install``` para download da node_modules e seus componentes.
 - Instalar o Angular com o comando ```npm install -g @angular/cli```
-- Instalar o componente de spinner com o comando ```npm install ngx-spinner --save```
 - Digitar no terminal o comando ```ng serve --o``` para abrir (irá abrir na porta 4200 por padrão).
 
 ### Rodando o projeto
